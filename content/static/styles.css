@@ -1,0 +1,73 @@
+* {
+    font-family: 'Kirang Haerang', cursive;
+}
+
+h1 {
+    color: red;
+}
+
+body {
+    text-align: center;
+    background-color: #ffe5d9;
+    background-image: url("wallpaper.jpg");
+    background-size: cover;
+}
+
+footer {
+    font-size: 12px;
+    color: gray;
+}
+
+ol {
+    justify-content: center;
+    padding: 0;
+}
+
+a {
+    font-size: 150% !important;
+    text-align: center;
+}
+
+input {
+    font-size: 18px !important;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+li {
+    height:170px;
+    width: 200px;
+    display: inline;
+    padding: 0;
+    box-shadow: 2px 2px 10px;
+}
+
+li div {
+
+    font-family: 'Ubuntu', sans-serif;
+}
+li button:nth-of-type(1){
+    float: left;
+    background-color: none;
+}
+
+li button:nth-of-type(2){
+    float:right;
+    background-color: none;
+}
+
+.bg-blueish {
+    background-color: #2a9d8f;
+}
+
+.bg-yellowish {
+    background-color: #e9c46a;
+} 
+
+.bg-orangeish {
+    background-color: #f4a261;
+}
+
+.bg-redish {
+    background-color: #e76f51;
+}

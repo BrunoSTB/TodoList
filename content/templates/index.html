@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Todo List
+{% endblock%}
+
+{% block main %}
+<br>
+<div class="d-inline-flex flex-column flex-wrap justify-content-center" id="management">
+    <h3>Enter a new Note</h3>
+    <form onsubmit="event.preventDefault()">
+        <input type="text" placeholder="New Note" autofocus id="user_input">
+        <button onclick="new_post_it()" class="btn btn-success mt-0 p-1 px-2" id="btn_new">New</button>
+    </form>
+    <button onclick="delete_all()" class="btn btn-danger mt-3 p-0" id="deletion">Delete All Notes</button>
+
+</div>
+<br>
+
+<hr>
+
+<div>
+    <p id="parag">
+    <ol class="d-flex flex-row justify-content-center flex-wrap" id="current">
+    </ol>
+    </p>
+</div>
+<script type=text/javascript src="{{
+    url_for('static', filename='todolist.js') }}"></script>
+{% endblock %}
