@@ -8,7 +8,7 @@ function new_post_it() {
             alert("Text is bigger than the allowed!")
             break;
         }
-        document.getElementById("current").innerHTML += "<li class='m-2 card " + random_color() + "'><div class='container-fluid m-0 p-0 '><input type='checkbox'><button onclick='remove_self(this)' class='btn btn-sm'><b>x</b></button></div><div class='card-body px-1 pb-2 pt-0'>" + newItem + "</div></li>";
+        document.getElementById("current").innerHTML += "<li class='m-2 card " + random_color() + "'><div class='container-fluid m-0 p-0 '><button onclick='remove_self(this)' class='btn btn-sm'><b>x</b></button></div><div class='card-body px-1 pb-2 pt-0'>" + newItem + "</div></li>";
         document.getElementById('user_input').value = '';
         break;
     }
