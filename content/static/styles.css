@@ -13,6 +13,10 @@ body {
     background-size: cover;
 }
 
+form button {
+    vertical-align: top !important;
+}
+
 footer {
     font-size: 12px;
     color: gray;
@@ -33,6 +37,65 @@ input {
     font-family: 'Ubuntu', sans-serif;
 }
 
+#palette {
+    height: 100px;
+    margin-top: 10px !important;
+    padding-top: 2px !important;
+    position:absolute;
+    right: -27px;
+    display:none;
+    background-color: #264653;
+    color: #8ecae6;
+}
+
+i {
+    cursor: pointer;   
+}
+
+i:nth-of-type(1) {
+    color: #2a9d8f;
+}
+
+i:nth-of-type(2) {
+    color: #e9c46a;
+}
+
+i:nth-of-type(3) {
+    color: #f4a261;
+}
+
+i:nth-of-type(4) {
+    color: #e76f51;
+}
+
+li div input{
+    -webkit-appearance: none;
+	background-color: none;
+	border: none;
+	padding: 9px;
+    width:20px;
+    height: 20px;
+	display: inline-block;
+    content: '\27A4';
+}
+
+li div input:not(:checked):after {
+    content: '\27A4';
+    font-size: 14px;
+    display:block;
+    color: #303030;
+    cursor: pointer;
+}
+
+li div input:checked:after {
+    content:'\27A4';
+    font-size: 14px;
+	color: black;
+    display: block;
+    cursor: pointer;
+
+} 
+
 
 li {
     height:170px;
@@ -46,14 +109,13 @@ li div {
 
     font-family: 'Ubuntu', sans-serif;
 }
-li button:nth-of-type(1){
-    float: left;
+li button{
     background-color: none;
+    margin-top: -7px !important;
 }
 
-li button:nth-of-type(2){
-    float:right;
-    background-color: none;
+li input {
+    display: inline;
 }
 
 .bg-blueish {

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock%}
+
+{% block main %}
+    <form action="/login" method="POST">
+        <div class="d-flex flex-column flew-wrap">
+            Username:
+            <input type="text" name="username" id="username" autofocus placeholder="Username">
+        </div>
+        <div class="d-flex flex-column flew-wrap">
+            Password:
+            <input type="password" name="password" id="password" placeholder="Password">
+        </div>
+        <button type="submit">Submit form</button>
+    </form>
+{% endblock %}
