@@ -1,19 +1,25 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Login
+Login
 {% endblock%}
 
 {% block main %}
-    <form action="/login" method="POST">
-        <div class="d-flex flex-column flew-wrap">
-            Username:
-            <input type="text" name="username" id="username" autofocus placeholder="Username">
+<div id="login_and_register" class="card">
+    <form id="formLogin" class="d-flex flex-column justify-content-center col-sm" action="/login" method="POST">
+        <div class="form-group">
+            <label for="username" class="h4">Enter Username:</label>
+            <input type="text" class="form-control p-0 text-center" autocomplete="off" name="username" id="username" autofocus
+                placeholder="Username">
         </div>
-        <div class="d-flex flex-column flew-wrap">
-            Password:
-            <input type="password" name="password" id="password" placeholder="Password">
+
+        <div class="form-group">
+            <label for="password" class="h4">Enter password:</label>
+            <input type="password" class="form-control text-center" name="password" id="password"
+                placeholder="Password">
         </div>
-        <button type="submit">Submit form</button>
+        
+        <button type="submit" class="btn btn-primary text-center">Log In</button>
     </form>
+</div>
 {% endblock %}

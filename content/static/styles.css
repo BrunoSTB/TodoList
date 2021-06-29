@@ -2,10 +2,23 @@
     font-family: 'Kirang Haerang', cursive;
 }
 
-h1 {
-    color: red;
+/* Logo */
+.navbar {
+    margin-left: auto;
+    flex-grow: 0.05;
 }
 
+.navbar-brand {
+    font-size: 150% !important;
+    text-align: center;
+}
+
+#navbar a {
+    color:#000814;
+    margin: 0;
+}
+
+/* Body */
 body {
     text-align: center;
     background-color: #ffe5d9;
@@ -13,59 +26,58 @@ body {
     background-size: cover;
 }
 
-form button {
-    vertical-align: top !important;
-}
-
+/* Footer */
 footer {
     font-size: 12px;
     color: gray;
 }
+
+/* Alligns "New" button in index.html */ 
+#management form button {
+    vertical-align: top !important;
+}
+
+/* All input font definition */
+input {
+    font-size: 18px !important;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*Postit Grid*/
 
 ol {
     justify-content: center;
     padding: 0;
 }
 
-a {
-    font-size: 150% !important;
-    text-align: center;
+
+/* POSTITS */
+
+li {
+    height:170px;
+    width: 200px;
+    display: inline;
+    padding: 0;
+    box-shadow: 2px 2px 10px;
+    font-family: 'Ubuntu', sans-serif !important;
 }
 
-input {
-    font-size: 18px !important;
-    font-family: 'Ubuntu', sans-serif;
+li div {
+    font-family: 'Ubuntu', sans-serif !important;
 }
 
-#palette {
-    height: 100px;
-    margin-top: 10px !important;
-    padding-top: 2px !important;
-    position:absolute;
-    right: -27px;
-    display:none;
-    background-color: #264653;
-    color: #8ecae6;
+/* Postit close button */
+
+li button{
+    background-color: none;
+    margin-top: -7px !important;
 }
 
-i {
-    cursor: pointer;   
-}
 
-i:nth-of-type(1) {
-    color: #2a9d8f;
-}
+/* Postit's color menu arrow */
 
-i:nth-of-type(2) {
-    color: #e9c46a;
-}
-
-i:nth-of-type(3) {
-    color: #f4a261;
-}
-
-i:nth-of-type(4) {
-    color: #e76f51;
+li input {
+    display: inline;
 }
 
 li div input{
@@ -96,27 +108,40 @@ li div input:checked:after {
 
 } 
 
-
-li {
-    height:170px;
-    width: 200px;
-    display: inline;
-    padding: 0;
-    box-shadow: 2px 2px 10px;
+/* Palette menu */
+#palette {
+    height: 100px;
+    margin-top: 10px !important;
+    padding-top: 2px !important;
+    position:absolute;
+    right: -27px;
+    display:none;
+    background-color: #264653;
+    color: #8ecae6;
 }
 
-li div {
-
-    font-family: 'Ubuntu', sans-serif;
-}
-li button{
-    background-color: none;
-    margin-top: -7px !important;
+/* The choosable colors on the color palette */
+i {
+    cursor: pointer;   
 }
 
-li input {
-    display: inline;
+i:nth-of-type(1) {
+    color: #2a9d8f;
 }
+
+i:nth-of-type(2) {
+    color: #e9c46a;
+}
+
+i:nth-of-type(3) {
+    color: #f4a261;
+}
+
+i:nth-of-type(4) {
+    color: #e76f51;
+}
+
+/* Custom classes for post it background colors */
 
 .bg-blueish {
     background-color: #2a9d8f;
@@ -132,4 +157,14 @@ li input {
 
 .bg-redish {
     background-color: #e76f51;
+}
+
+/* Login and Register */
+#login_and_register {
+    background-color: transparent;
+}
+
+#formLogin {
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
