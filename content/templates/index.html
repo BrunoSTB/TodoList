@@ -9,12 +9,13 @@ Todo List
 <div>
     <div class="d-inline-flex flex-column flex-wrap justify-content-center" id="management">
         <h3>Enter a new Note</h3>
-        <form onsubmit="event.preventDefault()">
-            <input type="text" placeholder="New Note" autocomplete="off" autofocus id="user_input">
-            <button onclick="new_Post_It()" class="btn btn-success mt-0 p-1 px-2" id="btn_new">New</button>
+        <form action="/" method="post">
+            <input type="text" placeholder="New Note" name="content" autocomplete="off" autofocus id="content">
+            <button class="btn btn-success mt-0 p-1 px-2" id="btn_new">New</button>
         </form>
-        <button onclick="delete_All()" class="btn btn-danger mt-3 p-0" id="deletion">Delete All Notes</button>
-
+        <form onsubmit="return confirm('Do you really want to delete all of your notes?')" action="/deleteAll" method="post">
+            <button  class="btn btn-danger mt-3 p-0" id="deletion">Delete All Notes</button>
+        </form>
     </div>
     <br>
 
@@ -23,6 +24,33 @@ Todo List
     <div>
         <p id="parag">
         <ol class="d-flex flex-row justify-content-center flex-wrap" id="current">
+            {% for row in userNotes %}
+            <li style="background-color:{{ row[2] }}" class='m-3 card'>
+                <div class='d-flex justify-content-around m-0 p-0'>
+
+                    <form action="/remove" method="post">
+                        <button name="removeBtn" value="{{ row[0] }}" class='btn btn-sm'><b>x</b></button>
+                    </form>
+
+                    <input class='ml-auto' onclick='toggle_Palette(this)' id='colorPick' type='checkbox'>
+                    <div class='m-0 px-1 card' id='palette'>
+                        <form action="/changeColor" id="paletteMenu" method="post">
+                            <button value="{{ row[0] }}" name="blueBtn" class="btn"> <i
+                                    class='bi bi-square-fill d-block'></i> </button>
+                            <button value="{{ row[0] }}" name="yellowBtn" class="btn"> <i
+                                    class='bi bi-square-fill d-block'></i> </button>
+                            <button value="{{ row[0] }}" name="orangeBtn" class="btn"> <i
+                                    class='bi bi-square-fill d-block'></i> </button>
+                            <button value="{{ row[0] }}" name="redBtn" class="btn"> <i
+                                    class='bi bi-square-fill d-block'></i> </button>
+                        </form>
+                    </div>
+                </div>
+                <div class='card-body px-1 pb-2 pt-0'>
+                    {{ row[1] }}
+                </div>
+            </li>
+            {% endfor %}
         </ol>
         </p>
     </div>
